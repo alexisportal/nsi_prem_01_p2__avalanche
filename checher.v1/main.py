@@ -58,6 +58,20 @@ def draw_checkerboard():
 
     # canvas.create_image(3*40, 1*40, anchor=NW, image=img_damier_jeu_dame_noire)
 
+def satistique():
+    text_title.set("Bienvenue au statistique des données")
+
+
+
+
+
+
+
+
+
+
+
+
 
 def new_game():
 
@@ -240,6 +254,7 @@ fenetre.configure(background="white")
 menubar = Menu(fenetre)
 menu_action = Menu(menubar,tearoff=0)
 menu_action.add_command(label="Nouvelle partie",command=new_game)
+menu_action.add_command(label="Statistique",command=new_game)
 menu_action.add_separator()
 menu_action.add_command(label="Quitter",command=action_quitter)
 menubar.add_cascade(label="Action",menu=menu_action)
@@ -268,6 +283,12 @@ text_point2 = StringVar()
 text_point2.set("Point joueur Blanc : " + str(point_joueur_blanc))
 label_point2 = Label(fenetre,textvariable=text_point2,bg="white")
 label_point2.place(x=250,y=420)
+
+# Création des textes (Titres)
+text_title = StringVar()
+text_title.set("Bienvenue au statistique des données")
+label_title = Label(fenetre, textvariable=text_title,bg="green")
+label_title.place(x=250,y=420)
 
 # Création des images
 img_damier_jeu_dame_blanche = PhotoImage(file="img_damier_jeu_dame_blanche.gif")
