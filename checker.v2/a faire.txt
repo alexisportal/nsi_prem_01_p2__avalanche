@@ -1,0 +1,35 @@
+1: creation nouv fichier data.py
+2: dans data créer une liste et dans chaque element de la liste une partie
+dans chaque liste il y a une liste de coups joués:
+- pos_start 	 : (x_case,y_case)
+- pos_end   	 : (x_case,y_case)
+- pawn_type 	 : "PION" ou "DAME"
+- pos_eaten_pawn : (x_case,y_case) ou None
+- score		 : entier
+
+checkerdata = []
+
+3: fonction qui charge les données sauvegarder avant (data.load)
+comme les k plus proches voisins
+4: creation de sauvegarde (data.save)
+regarder internet comme faire l'inverse du 3
+5: creation de nouvelle partie (data.new) 
+rajouter une liste vide a la fin de cherckerdata
+6: creation de la fonction append_data qui ajoute dans la dernière liste de 
+checkerdata
+- pos_start 	 : (x_case,y_case)
+- pos_end   	 : (x_case,y_case)
+- pawn_type 	 : "PION" ou "DAME"
+- pos_eaten_pawn : (x_case,y_case) ou None
+- score		 : entier
+qui est recupérer du return de la ligne 169 du main 
+
+list_dans_laquelle_ajouter = checkerdata[len(checker_data)-1]
+data = {"pos_start" : ..., "pos_end" : ..., ...}
+list_dans_laquelle_ajouter.append(data)
+
+7: a faire dans main.py 
+-l 287 appeller fct data.load
+-l 103 appeller fct data.new
+-l 223 appeller fct data.save
+-apres l 180 appeler fct data.append_data
